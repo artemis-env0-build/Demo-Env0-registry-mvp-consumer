@@ -1,0 +1,10 @@
+version: 2
+deploy:
+  steps:
+    terraformPlan:
+      after:
+        - name: "Demo: Show registry module source in code"
+          run: |
+            echo "----- module source line(s) -----"
+            grep -R "api.env0.com" -n .
+            echo "---------------------------------"

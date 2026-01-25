@@ -3,8 +3,8 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - name: "Demo: Show registry module source in code"
+        - name: "Demo: Confirm env0 registry module source"
           run: |
-            echo "----- module source line(s) -----"
+            echo "----- searching for api.env0.com module source -----"
             grep -R "api.env0.com" -n .
-            echo "---------------------------------"
+            echo "---------------------------------------------------"

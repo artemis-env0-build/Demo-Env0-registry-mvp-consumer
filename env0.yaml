@@ -3,8 +3,8 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - name: "Demo: Confirm env0 registry module source"
+        - name: "Demo: Confirm module registry source is present"
           run: |
-            echo "----- searching for api.env0.com module source -----"
-            grep -R "api.env0.com" -n .
-            echo "---------------------------------------------------"
+            echo "----- module source check -----"
+            grep -R "api.env0.com/bde19c6d-d0dc-4b11-a951-8f43fe49db92/artemis-registry-mvp-local-file/local" -n .
+            echo "-------------------------------"
